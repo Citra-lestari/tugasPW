@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select an Option</title>
+</head>
+<body>
+    <h2>Pilih buah favoritmu</h2>
+    <select id="fruitSelect">
+        <option value="Apel">Apel</option>
+        <option value="Pisang">Pisang</option>
+        <option value="Cherry">Cherry</option>
+        <option value="Mangga">Mangga</option>
+    </select>
+    <button id="selectButton">Lihat pilihan</button>
+
+    <p id="result"></p>
+
+    <script>
+        // Ambil elemen select, tombol, dan paragraf hasil
+        const select = document.getElementById('fruitSelect');
+        const button = document.getElementById('selectButton');
+        const result = document.getElementById('result');
+
+        // Tambahkan event listener untuk tombol
+        button.addEventListener('click', function() {
+            // Ambil nilai dari pilihan yang dipilih
+            const selectedFruit = select.value;
+
+            // Tampilkan pilihan yang dipilih di paragraf hasil
+            result.textContent = 'Kamu memilih: ' + selectedFruit;
+        });
+    </script>
+</body>
+</html>
